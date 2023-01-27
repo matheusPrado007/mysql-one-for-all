@@ -47,6 +47,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
       musicas_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
       nm_musica VARCHAR(50) NOT NULL,
       album_id INT NOT NULL,
+      duracao INT NOT NULL,
       FOREIGN KEY (album_id) REFERENCES album (album_id)
   ) engine = InnoDB;
 
@@ -87,7 +88,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
     ('Martin Fowler', 4, 4),
     ('Sandi Metz', 4,5),
     ('Paulo Freire', 2, 6),
-    ('Bell Hooks', 2, 7),
+    ('Bell Hooks', 3, 7),
     ('Christopher Alexander', 3, 8),
     ('Judith Butler', 3, 9),
     ('Jorge Amado', 3, 10);
@@ -129,18 +130,18 @@ DROP DATABASE IF EXISTS SpotifyClone;
     ('Somewhere Far Beyond', 2007, 5),
     ('I Put A Spell On You', 2012, 6);
 
-  INSERT INTO SpotifyClone.musicas (nm_musica, album_id)
+  INSERT INTO SpotifyClone.musicas (nm_musica, album_id, duracao)
   VALUES
-    ('BREAK MY SOUL', 1),
-    ("VIRGO'S GROOVE", 1),
-    ('ALIEN SUPERSTAR', 1),
-    ("Don't Stop Me Now", 2),
-    ('Under Pressure', 3),
-    ('Como Nossos Pais', 4),
-    ('O Medo de Amar é o Medo de Ser Livre', 5),
-    ('Samba em Paris', 6),
-    ("The Bard's Song", 7),
-    ('Feeling Good', 8);
+    ('BREAK MY SOUL', 1, 279),
+    ("VIRGO'S GROOVE", 1, 369),
+    ('ALIEN SUPERSTAR', 1, 116),
+    ("Don't Stop Me Now", 2, 203),
+    ('Under Pressure', 3, 152),
+    ('Como Nossos Pais', 4, 105),
+    ('O Medo de Amar é o Medo de Ser Livre', 5, 207),
+    ('Samba em Paris', 6, 267),
+    ("The Bard's Song", 7, 244),
+    ('Feeling Good', 8, 100);
 
   INSERT INTO SpotifyClone.historico_de_reproducoes (musicas_id, usuario_id)
   VALUES
@@ -156,7 +157,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
     (5, 5),
     (7, 6),
     (1, 6),
-    (1, 7),
+    (4, 7),
     (4, 8),
     (9, 9),
     (3, 10);
