@@ -77,7 +77,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
   INSERT INTO SpotifyClone.planos (plano, valor_plano)
   VALUES
     ('gratuito', 0.00),
-    ('familiar', 7.999),
+    ('familiar', 7.99),
     ('universitário', 5.99),
     ('pessoal', 6.99);
 
@@ -85,14 +85,14 @@ DROP DATABASE IF EXISTS SpotifyClone;
   VALUES
     ('Barbara Liskov', 1, 1),
     ('Robert Cecil Martin', 1, 2),
-    ('Ada Lovelace', 4, 3),
-    ('Martin Fowler', 4, 4),
-    ('Sandi Metz', 4,5),
-    ('Paulo Freire', 2, 6),
+    ('Ada Lovelace', 2, 3),
+    ('Martin Fowler', 2, 4),
+    ('Sandi Metz', 2,5),
+    ('Paulo Freire', 3, 6),
     ('Bell Hooks', 3, 7),
-    ('Christopher Alexander', 3, 8),
-    ('Judith Butler', 3, 9),
-    ('Jorge Amado', 3, 10);
+    ('Christopher Alexander', 4, 8),
+    ('Judith Butler', 4, 9),
+    ('Jorge Amado', 4, 10);
 
   INSERT INTO SpotifyClone.artista (nm_artista, artista_id)
    VALUES
