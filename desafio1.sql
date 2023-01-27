@@ -54,6 +54,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
   CREATE TABLE SpotifyClone.historico_de_reproducoes(
       musicas_id INT NOT NULL,
       usuario_id INT NOT NULL,
+      datas DATE NOT NULL,
       CONSTRAINT PRIMARY KEY(usuario_id, musicas_id),
       FOREIGN KEY (usuario_id) REFERENCES SpotifyClone.usuario (usuario_id),
       FOREIGN KEY (musicas_id) REFERENCES SpotifyClone.musicas (musicas_id)
@@ -143,24 +144,24 @@ DROP DATABASE IF EXISTS SpotifyClone;
     ("The Bard's Song", 7, 244),
     ('Feeling Good', 8, 100);
 
-  INSERT INTO SpotifyClone.historico_de_reproducoes (musicas_id, usuario_id)
+  INSERT INTO SpotifyClone.historico_de_reproducoes (musicas_id, usuario_id, datas)
   VALUES
-    (8, 1),
-    (2, 1),
-    (10, 1),
-    (10, 2),
-    (7, 2),
-    (10, 3),
-    (2, 3),
-    (8, 4),
-    (8, 5),
-    (5, 5),
-    (7, 6),
-    (1, 6),
-    (4, 7),
-    (4, 8),
-    (9, 9),
-    (3, 10);
+    (8, 1, '2022-02-28 10:45:55'),
+    (2, 1, '2020-05-02 05:30:35'),
+    (10, 1, '2020-03-06 11:22:33'),
+    (10, 2, '2022-08-05 08:05:17'),
+    (7, 2, '2020-01-02 07:40:33'),
+    (10, 3, '2020-11-13 16:55:13'),
+    (2, 3, '2020-12-05 18:38:30'),
+    (8, 4, '2021-08-15 17:10:10'),
+    (8, 5, '2022-01-09 01:44:33'),
+    (5, 5, '2020-08-06 15:23:43'),
+    (7, 6, '2017-01-24 00:31:17'),
+    (1, 6, '2017-10-12 12:35:20'),
+    (4, 7, '2011-12-15 22:30:49'),
+    (4, 8, '2012-03-17 14:56:41'),
+    (9, 9, '2022-02-24 21:14:22'),
+    (3, 10, '2015-12-13 08:30:22');
 
   
 
