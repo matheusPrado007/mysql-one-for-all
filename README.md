@@ -5,4 +5,6 @@ Nesse projeto Normalizei e populei tabelas, e executei queries com intuito de en
 ## Tecnologias utilizadas
 - Docker
 - SQL
-- MySql
+- 
+## Banco de dados
+- MySQL
